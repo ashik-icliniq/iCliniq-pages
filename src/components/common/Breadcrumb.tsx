@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Carousel } from 'flowbite-react';
 
 interface BreadcrumbContent {
@@ -6,6 +6,10 @@ interface BreadcrumbContent {
 }
 
 function Breadcrumb({content} : BreadcrumbContent) {
+
+
+  
+
   return (
     <div className='breadcrumb'>
        <span>iCliniq / </span> 

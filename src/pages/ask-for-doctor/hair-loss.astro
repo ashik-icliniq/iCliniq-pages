@@ -4,11 +4,15 @@ import Header from '../../components/common/Header';
 import Breadcrumb from '../../components/common/Breadcrumb';
 import AskDoctor from '../../components/common/AskDoctor';
 import Footer from '../../components/common/Footer';
+
+
+const response = await fetch('https://api.npoint.io/aec0bf1f1d18c0d32311');
+const data = await response.json();
 ---
 
 <Layout title="iCliniq - Hair Loss">
     <Header client:load />
     <Breadcrumb  content='Ask a Doctor Online / Ask a Dermatologist' />
-    <AskDoctor client:load  />
+    <AskDoctor doctorDetails={data} client:load  />
     <Footer  client:load  />
 </Layout>

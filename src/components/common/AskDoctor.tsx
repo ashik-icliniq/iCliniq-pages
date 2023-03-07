@@ -10,7 +10,73 @@ type resultProps = {
     expertIn: string;
 };
 
-function DoctorCarousel() {
+type DoctorCarouselProps = {
+    doctorDetails : any; 
+}
+
+function DoctorCarousel(docProp: any) {
+  
+
+    return(
+        <div className="h-32 ">
+        <Carousel
+            leftControl={<BsFillArrowLeftCircleFill />}
+            rightControl={<BsFillArrowRightCircleFill />}
+            indicators={false} >
+                {
+                    Object.values(docProp).map((res: any) => {
+                        return (
+                           
+                                Object.values(res).map((data: any) => {
+                                    return (
+                                        <Card className='px-10 '>
+                                                <div className='flex items-center'>
+                                                    <div className='flex items-center justify-center flex-col'>
+                                                    <div className="flex flex-wrap gap-2">
+                                                            <Avatar
+                                                                img={data.img}
+                                                                rounded={true}
+                                                            />
+                                                        </div>
+                                                        <Rating className='mt-2'>
+                                                        {(() => {
+                                                            const arr: any = [];
+                                                            for (let i:number = 1; i <= 5; i++) {
+                                                                if(i <= data.rating){
+                                                                    arr.push(<Rating.Star />)
+                                                                }
+                                                                else {
+                                                                    arr.push(<Rating.Star filled={false} />)
+                                                                }
+                                                            }
+                                                            return(
+                                                                <>
+                                                                    {arr}
+                                                                </>
+                                                            )   
+                                                        })()}
+                                                        </Rating>
+                                                    </div>
+                                                    <div className=' pl-5 flex flex-col'>
+                                                        <span className='text-l	'>{data.drName}</span>
+                                                        <span className='text-slate-400	text-sm	'>{data.expertIn}</span>
+                                                    </div>
+                                                </div>
+                                            </Card>
+                                    )
+                                })
+                           
+                        )
+                        
+                    })
+                }
+            
+        </Carousel>
+    </div>    
+    )
+}
+export default function AskDoctor({doctorDetails} : DoctorCarouselProps){
+
     const [result, setResult] = useState<resultProps[]>([]);
 
     useEffect(() => {
@@ -21,68 +87,13 @@ function DoctorCarousel() {
         // };
     
         // api();
-        setResult(CONSTANTS.ONLINE_DOCTORS)
+        setResult(doctorDetails)
     }, []);
-
-    
-    return(
-        <div className="h-32 ">
-        <Carousel
-            leftControl={<BsFillArrowLeftCircleFill />}
-            rightControl={<BsFillArrowRightCircleFill />}
-            indicators={false} >
-                {
-                    result.map((data) => {
-                        return (
-                            <Card className='px-10 '>
-                                <div className='flex items-center'>
-                                    <div className='flex items-center justify-center flex-col'>
-                                    <div className="flex flex-wrap gap-2">
-                                            <Avatar
-                                                img={data.img}
-                                                rounded={true}
-                                            />
-                                        </div>
-                                        <Rating className='mt-2'>
-                                        {(() => {
-                                            const arr: any = [];
-                                            for (let i:number = 1; i <= 5; i++) {
-                                                if(i <= data.rating){
-                                                    arr.push(<Rating.Star />)
-                                                }
-                                                else {
-                                                    arr.push(<Rating.Star filled={false} />)
-                                                }
-                                            }
-                                            return(
-                                                <>
-                                                    {arr}
-                                                </>
-                                            )   
-                                        })()}
-                                        </Rating>
-                                    </div>
-                                    <div className=' pl-5 flex flex-col'>
-                                        <span className='text-l	'>{data.drName}</span>
-                                        <span className='text-slate-400	text-sm	'>{data.expertIn}</span>
-                                    </div>
-                                </div>
-                            </Card>
-                        )
-                    })
-                }
-            
-        </Carousel>
-    </div>    
-    )
-}
-export default function AskDoctor(){
-
     
    
     return (
         <>
-        
+
         <div className="container mx-auto">
             <div className='flex justify-center flex-col'>
                 <span className='text-center text-2xl mt-10'>Your first Query is FREE !</span>
@@ -110,7 +121,8 @@ export default function AskDoctor(){
                            <span className='font-semibold text-xl'>2233</span> Doctors Online
                         </span>
                         <div className='mt-10 lg:m-14 mb-1'>  
-                            <DoctorCarousel />      
+                            <DoctorCarousel docProp={doctorDetails} />      
+                            
                         </div>
                         
                     </div>
