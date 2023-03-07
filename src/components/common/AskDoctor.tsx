@@ -14,13 +14,14 @@ function DoctorCarousel() {
     const [result, setResult] = useState<resultProps[]>([]);
 
     useEffect(() => {
-        const api = async () => {
-          const data = await fetch("https://api.npoint.io/aec0bf1f1d18c0d32311");
-          const jsonData = await data.json();
-          setResult(jsonData);
-        };
+        // const api = async () => {
+        //   const data = await fetch("https://api.npoint.io/aec0bf1f1d18c0d32311");
+        //   const jsonData = await data.json();
+        //   setResult(jsonData);
+        // };
     
-        api();
+        // api();
+        setResult(CONSTANTS.ONLINE_DOCTORS)
     }, []);
 
     
