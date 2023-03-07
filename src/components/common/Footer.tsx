@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card } from 'flowbite-react';
-import {FaFacebookF, FaLinkedinIn , FaInstagram, FaCcVisa, FaCcMastercard, FaCcDiscover, FaCcPaypal } from 'react-icons/fa';
-import {SiAmericanexpress} from 'react-icons/si';
-import {AiOutlineTwitter, AiFillYoutube} from 'react-icons/ai';
-import {FcCustomerSupport} from 'react-icons/fc';
+import {FaFacebookF, FaLinkedinIn , FaInstagram, FaCcVisa, FaCcMastercard, FaCcDiscover, FaCcPaypal } from 'react-icons/fa/index';
+import {SiAmericanexpress} from 'react-icons/si/index';
+import {AiOutlineTwitter, AiFillYoutube} from 'react-icons/ai/index';
+import {FcCustomerSupport} from 'react-icons/fc/index';
 
 function Footer() {
 

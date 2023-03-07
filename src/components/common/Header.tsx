@@ -1,7 +1,7 @@
 import React , {useState, useEffect} from 'react';
-import { ImSearch } from 'react-icons/im';
-import {MdOutlineArrowDropDown} from 'react-icons/md';
-import {HiMenu} from 'react-icons/hi';
+import { ImSearch } from 'react-icons/im/index';
+import {MdOutlineArrowDropDown} from 'react-icons/md/index';
+import {HiMenu} from 'react-icons/hi/index';
 import Sidebar from './Sidebar';
 import * as CONSTANTS from '../../constants';
 

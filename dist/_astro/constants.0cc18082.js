@@ -1,0 +1,1 @@
+const o=["All","Anxiety","Depression","Delayed Period","Headache","Stress"],e=["Consult Doctor","Choose a Doctor",{More:["Ask a Doctor Online","Chat with Doctor","Phone a Doctor"]}];export{o as B,e as N};

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import {AiOutlineCloseCircle} from 'react-icons/ai'
+import {AiOutlineCloseCircle} from 'react-icons/ai/index'
 import * as CONSTANTS from '../../constants'
-import {MdOutlineArrowDropDown} from 'react-icons/md';
+import {MdOutlineArrowDropDown} from 'react-icons/md/index';
 
 
 interface SideBarProps {

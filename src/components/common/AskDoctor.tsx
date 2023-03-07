@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Card, Button ,Textarea, Carousel, Tabs, Avatar, Rating} from 'flowbite-react'
-import {BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from 'react-icons/bs'
+import {BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from 'react-icons/bs/index'
 import * as CONSTANTS from '../../constants';
 
 type resultProps = {
