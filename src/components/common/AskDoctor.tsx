@@ -9,15 +9,8 @@ type resultProps = {
     expertIn: string;
 };
 
-type DoctorCarouselProps = {
-    doctorDetails : any; 
-}
-
-
 
 function DoctorCarousel() {
-
-    
 
     return(
         <div className="h-32 ">
@@ -138,10 +131,11 @@ export default function AskDoctor(){
                         <p className='mt-3 text-center'>Ask your Liver queries to our experienced medical gastroenterologists and receive instant medical advice and second opinion.</p>
                         <p className='mt-3 text-center'>Our medical panel consists of over 50+ highly skilled medical gastroenterologists who specialized in Liver treatment.</p>
                         <hr className='my-8'/>
-                        
+{/*                         
                         <Tabs.Group
-                            aria-label="Pills"
-                            style="pills"
+                            className="bg-white rounded-lg dark:bg-gray-800 dark:text-white"
+                            onActiveTabChange={function noRefCheck(){}}
+                            style="underline"
                             >
                             <Tabs.Item
                                 active={true}
@@ -177,7 +171,7 @@ export default function AskDoctor(){
 
                                 </Card>
                             </Tabs.Item>
-                            </Tabs.Group>
+                        </Tabs.Group> */}
 
                             
                     </Card>
