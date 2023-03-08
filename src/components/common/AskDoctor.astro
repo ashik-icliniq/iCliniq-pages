@@ -1,0 +1,25 @@
+---
+import DoctorsOnline from '../askDoctor/DoctorsOnline'
+import LiveSpecialist from '../askDoctor/LiveSpecialist';
+import ParadeInside from '../askDoctor/ParadeInside';
+---
+
+<div class="container mx-auto w-4/5">
+    <div class='flex justify-center flex-col'>
+        <span class='text-center text-2xl mt-10'>Your first Query is FREE !</span>
+        <div class='grid grid-cols-1 mt-8  lg:grid-cols-2'>
+           <LiveSpecialist />
+           <DoctorsOnline client:visible />
+        </div>
+    </div>
+    <div class='flex justify-center flex-col'>
+        <span class='text-center text-2xl mt-10 tracking-wide	'>iCliniq IS TOP RATED BY</span>
+        <div class='flex w-100 items-center justify-center mt-6'>
+            <img class='h-12 w-100 mr-2' src="https://assets.icliniq.com/v2/img/Parade.svg" alt=""  />
+            <img class='h-6 w-100 ml-2'  src="https://assets.icliniq.com/v2/assets/images/insider-1-color.svg" alt=""  />
+        </div>
+        <div class="flex justify-center mt-8">
+            <ParadeInside />
+        </div>
+    </div>
+</div>
