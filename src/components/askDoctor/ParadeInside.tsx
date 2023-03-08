@@ -8,7 +8,7 @@ function ParadeInside() {
                         <p className='mt-3 text-center'>Our medical panel consists of over 50+ highly skilled medical gastroenterologists who specialized in Liver treatment.</p>
                         <hr className='my-8'/>
                         
-                        <Tabs.Group
+                        {/* <Tabs.Group
                             className="bg-white rounded-lg dark:bg-gray-800 dark:text-white"
                             style="pills"
                             >
@@ -46,7 +46,7 @@ function ParadeInside() {
 
                                 </Card>
                             </Tabs.Item>
-                        </Tabs.Group>
+                        </Tabs.Group> */}
 
                             
                     </Card>
