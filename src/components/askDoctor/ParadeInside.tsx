@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card} from 'flowbite-react'
+import { Card, Tabs} from 'flowbite-react'
 
 function ParadeInside() {
   return (
@@ -7,11 +7,10 @@ function ParadeInside() {
                         <p className='mt-3 text-center'>Ask your Liver queries to our experienced medical gastroenterologists and receive instant medical advice and second opinion.</p>
                         <p className='mt-3 text-center'>Our medical panel consists of over 50+ highly skilled medical gastroenterologists who specialized in Liver treatment.</p>
                         <hr className='my-8'/>
-{/*                         
+                        
                         <Tabs.Group
                             className="bg-white rounded-lg dark:bg-gray-800 dark:text-white"
-                            onActiveTabChange={function noRefCheck(){}}
-                            style="underline"
+                            style="default"
                             >
                             <Tabs.Item
                                 active={true}
@@ -47,7 +46,7 @@ function ParadeInside() {
 
                                 </Card>
                             </Tabs.Item>
-                        </Tabs.Group> */}
+                        </Tabs.Group>
 
                             
                     </Card>

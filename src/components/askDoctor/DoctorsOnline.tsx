@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Button ,Textarea, Carousel, Tabs, Avatar, Rating} from 'flowbite-react'
+import { Card,  Carousel,  Avatar, Rating} from 'flowbite-react'
 import * as CONSTANTS from '../../constants';
 
 
