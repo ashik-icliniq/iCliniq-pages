@@ -14,8 +14,8 @@ function DoctorCarousel() {
   return(
       <div className="h-32 ">
           <Carousel
-              leftControl={<i className="fa fa-arrow-left"></i>}
-              rightControl={<i className="fa fa-arrow-right"></i>}
+              leftControl={<i aria-hidden className="fa fa-arrow-left"></i>}
+              rightControl={<i aria-hidden className="fa fa-arrow-right"></i>}
               indicators={false} >
                   {
                       CONSTANTS.ONLINE_DOCTORS['Doctors'].map((res: resultProps) => {

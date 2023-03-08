@@ -9,7 +9,7 @@ import ParadeInside from '../askDoctor/ParadeInside';
         <span class='text-center text-2xl mt-10'>Your first Query is FREE !</span>
         <div class='grid grid-cols-1 mt-8  lg:grid-cols-2'>
            <LiveSpecialist />
-           <DoctorsOnline client:load />
+           <DoctorsOnline client:visible />
         </div>
     </div>
     <div class='flex justify-center flex-col'>
@@ -19,7 +19,7 @@ import ParadeInside from '../askDoctor/ParadeInside';
             <img class='h-6 w-100 ml-2'  src="https://assets.icliniq.com/v2/assets/images/insider-1-color.svg" alt=""  />
         </div>
         <div class="flex justify-center mt-8">
-            <ParadeInside client:idle />
+            <ParadeInside client:visible />
         </div>
     </div>
 </div>
