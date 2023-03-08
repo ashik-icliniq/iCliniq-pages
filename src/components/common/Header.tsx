@@ -1,5 +1,4 @@
 import React , {useState, useEffect} from 'react';
-import {MdOutlineArrowDropDown} from 'react-icons/md/index';
 import * as CONSTANTS from '../../constants';
 import {Navbar, Dropdown} from 'flowbite-react'
 
@@ -33,7 +32,9 @@ export default function Header() {
                                         inline={true}
                                         label={<div className='flex items-center'><Navbar.Link href="#">
                                                 {result} 
-                                            </Navbar.Link><MdOutlineArrowDropDown className="ml-2 text-xl" /></div>}
+                                            </Navbar.Link>
+                                            {/* <MdOutlineArrowDropDown className="ml-2 text-xl" /> */}
+                                            </div>}
                                         >
                                         {options[result].map ( (hiddenMenu) => {
                                                     return (

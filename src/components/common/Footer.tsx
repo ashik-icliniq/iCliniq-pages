@@ -1,9 +1,5 @@
 import React from 'react';
 import { Card } from 'flowbite-react';
-import {FaFacebookF, FaLinkedinIn , FaInstagram, FaCcVisa, FaCcMastercard, FaCcDiscover, FaCcPaypal } from 'react-icons/fa/index';
-import {SiAmericanexpress} from 'react-icons/si/index';
-import {AiOutlineTwitter, AiFillYoutube} from 'react-icons/ai/index';
-import {FcCustomerSupport} from 'react-icons/fc/index';
 
 function Footer() {
 
@@ -17,7 +13,7 @@ function Footer() {
                     </div>
                     <div className='flex items-center'>
                         <div className='bg-white	 mr-3 p-2 cursor-pointer rounded-full'>
-                            <FcCustomerSupport className='text-3xl   text-white' />
+                            {/* <FcCustomerSupport className='text-3xl   text-white' /> */}
                         </div>
                         <span className='text-white'>24 / 7 Support</span>
                     </div>
@@ -100,11 +96,11 @@ function Footer() {
                             PAYMENTS ACCEPTED
                         </h5>
                         <div className='flex mt-5 items-center'>
-                            <FaCcVisa className='text-5xl cursor-pointer mr-3 text-white' />
-                            <FaCcMastercard className='text-5xl cursor-pointer mr-3 text-white' />
-                            <FaCcDiscover className='text-5xl cursor-pointer mr-3 text-white' />
-                            <SiAmericanexpress className='text-5xl cursor-pointer mr-3 text-white' />
-                            <FaCcPaypal className='text-5xl cursor-pointer mr-3 text-white' />
+                            <i className="fa fa-cc-mastercard text-4xl cursor-pointer mr-3 text-white"></i>                            
+                            <i className="fa fa-cc-amex text-4xl cursor-pointer mr-3 text-white"></i>                           
+                            <i className="fa fa-cc-visa text-4xl cursor-pointer mr-3 text-white"></i>                           
+                            <i className="fa fa-cc-discover text-4xl cursor-pointer mr-3 text-white"></i>                           
+                            <i className="fa fa-cc-paypal text-4xl cursor-pointer mr-3 text-white"></i>                           
                         </div>
                     </div>
                     <div className='mt-10 lg:mt-0'>
@@ -113,18 +109,7 @@ function Footer() {
                         </h5>
                         <div className='flex mt-5 items-center'>
                             <div className='bg-blue-700	 mr-3 p-3 cursor-pointer rounded-full'>
-                                    <FaFacebookF className='text-l   text-white' />
-                            </div>
-                            <div className='bg-blue-400 mr-3 p-3 cursor-pointer rounded-full'>
-                                    <AiOutlineTwitter className='text-l  text-white' />
-                            </div>
-                            <div className='bg-sky-700		 mr-3 p-3 cursor-pointer rounded-full'>
-                                    <FaLinkedinIn className='text-l  text-white' />
-                            </div>
-                            <div className='bg-pink-600	 mr-3 p-3 cursor-pointer rounded-full'>
-                                    <FaInstagram className='text-l  text-white' />
-                            </div><div className='bg-red-600 cursor-pointer	 mr-3 p-3 rounded-full'>
-                                    <AiFillYoutube className='text-l   text-white' />
+                                <i className="fa fa-facebook-f text-l   text-white cursor-pointer"></i>                            
                             </div>
                         </div>
                     </div>

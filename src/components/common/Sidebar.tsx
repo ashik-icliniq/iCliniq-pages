@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import {AiOutlineCloseCircle} from 'react-icons/ai/index'
+// import {AiOutlineCloseCircle} from 'react-icons/ai/index'
 import * as CONSTANTS from '../../constants'
-import {MdOutlineArrowDropDown} from 'react-icons/md/index';
+
 
 
 interface SideBarProps {
@@ -40,7 +40,7 @@ export default function Sidebar ({sidebarOpen, closeSidebar}: SideBarProps){
         <>
             <div className={`sidebar-bg ${sidebarOpen ? 'block' : 'hidden'}`}></div>
             <div className={`sidebar ${!sidebarOpen && 'sidebar-move-aside'}`}>
-                <AiOutlineCloseCircle onClick={closeSidebar} className="text-3xl float-right m-5 cursor-pointer "/>
+                {/* <AiOutlineCloseCircle onClick={closeSidebar} className="text-3xl float-right m-5 cursor-pointer "/> */}
                 <div className="sidebar-nav-content">
                 {CONSTANTS.NAV_MENU.map((options) => {
                         return (
@@ -49,7 +49,9 @@ export default function Sidebar ({sidebarOpen, closeSidebar}: SideBarProps){
                             Object.keys(options).map ((result) => {
                                 return (
                                     <>
-                                        <div onClick={() => expandMenu(result)} className="flex items-center more-menu">{result} <MdOutlineArrowDropDown className="ml-2 text-2xl" /></div>
+                                        <div onClick={() => expandMenu(result)} className="flex items-center more-menu">{result} 
+                                        {/* <MdOutlineArrowDropDown className="ml-2 text-2xl" /> */}
+                                        </div>
                                         <div className={`nav-object-sidebar ${navMenu[result] ? 'block' : 'hidden' }`} >
                                             <div>
                                                 

@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import { Card, Button ,Textarea, Carousel, Tabs, Avatar, Rating} from 'flowbite-react'
-import {BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from 'react-icons/bs/index'
 import * as CONSTANTS from '../../constants';
 
 type resultProps = {
@@ -22,9 +21,10 @@ function DoctorCarousel() {
 
     return(
         <div className="h-32 ">
+    
         <Carousel
-            leftControl={<BsFillArrowLeftCircleFill  />}
-            rightControl={<BsFillArrowRightCircleFill />}
+            leftControl={<i className="fa fa-arrow-left"></i>}
+            rightControl={<i className="fa fa-arrow-right"></i>}
             indicators={false} >
                 {
                     CONSTANTS.ONLINE_DOCTORS['Doctors'].map((res: resultProps) => {
