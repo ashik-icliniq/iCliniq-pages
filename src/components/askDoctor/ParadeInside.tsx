@@ -10,7 +10,7 @@ function ParadeInside() {
                         
                         <Tabs.Group
                             className="bg-white rounded-lg dark:bg-gray-800 dark:text-white"
-                            style="default"
+                            style="pills"
                             >
                             <Tabs.Item
                                 active={true}
