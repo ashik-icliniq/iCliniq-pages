@@ -10,7 +10,7 @@ function Footer() {
   return (
     <>
         <Card className='rounded-none mt-20 footer pb-10' >
-            <div className=" mx-auto px-0 lg:px-5  container">
+            <div className=" mx-auto px-0 lg:px-5 w-4/5  container">
                 <div className='flex justify-between items-center  mb-10 ' >
                     <div>
                         <img src="/assets/images/ic-white-logo.svg" className='w-32 bg-white p-3 py-2 rounded' />

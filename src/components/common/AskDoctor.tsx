@@ -14,57 +14,56 @@ type DoctorCarouselProps = {
     doctorDetails : any; 
 }
 
-function DoctorCarousel(docProp: any) {
-  
+
+
+function DoctorCarousel() {
+
+    
 
     return(
         <div className="h-32 ">
         <Carousel
-            leftControl={<BsFillArrowLeftCircleFill />}
+            leftControl={<BsFillArrowLeftCircleFill  />}
             rightControl={<BsFillArrowRightCircleFill />}
             indicators={false} >
                 {
-                    Object.values(docProp).map((res: any) => {
+                    CONSTANTS.ONLINE_DOCTORS['Doctors'].map((res: resultProps) => {
+                        
                         return (
-                           
-                                Object.values(res).map((data: any) => {
-                                    return (
-                                        <Card className='px-10 '>
-                                                <div className='flex items-center'>
-                                                    <div className='flex items-center justify-center flex-col'>
-                                                    <div className="flex flex-wrap gap-2">
-                                                            <Avatar
-                                                                img={data.img}
-                                                                rounded={true}
-                                                            />
-                                                        </div>
-                                                        <Rating className='mt-2'>
-                                                        {(() => {
-                                                            const arr: any = [];
-                                                            for (let i:number = 1; i <= 5; i++) {
-                                                                if(i <= data.rating){
-                                                                    arr.push(<Rating.Star />)
-                                                                }
-                                                                else {
-                                                                    arr.push(<Rating.Star filled={false} />)
-                                                                }
-                                                            }
-                                                            return(
-                                                                <>
-                                                                    {arr}
-                                                                </>
-                                                            )   
-                                                        })()}
-                                                        </Rating>
-                                                    </div>
-                                                    <div className=' pl-5 flex flex-col'>
-                                                        <span className='text-l	'>{data.drName}</span>
-                                                        <span className='text-slate-400	text-sm	'>{data.expertIn}</span>
-                                                    </div>
-                                                </div>
-                                            </Card>
-                                    )
-                                })
+                            <Card className='px-10 '>
+                            <div className='flex items-center'>
+                                <div className='flex items-center justify-center flex-col'>
+                                <div className="flex flex-wrap gap-2">
+                                        <Avatar
+                                            img={res.img}
+                                            rounded={true}
+                                        />
+                                    </div>
+                                    <Rating className='mt-2'>
+                                    {(() => {
+                                        const arr: any = [];
+                                        for (let i:number = 1; i <= 5; i++) {
+                                            if(i <= res.rating){
+                                                arr.push(<Rating.Star />)
+                                            }
+                                            else {
+                                                arr.push(<Rating.Star filled={false} />)
+                                            }
+                                        }
+                                        return(
+                                            <>
+                                                {arr}
+                                            </>
+                                        )   
+                                    })()}
+                                    </Rating>
+                                </div>
+                                <div className=' pl-5 flex flex-col'>
+                                    <span className='text-l	'>{res.drName}</span>
+                                    <span className='text-slate-400	text-sm	'>{res.expertIn}</span>
+                                </div>
+                            </div>
+                        </Card>
                            
                         )
                         
@@ -75,7 +74,7 @@ function DoctorCarousel(docProp: any) {
     </div>    
     )
 }
-export default function AskDoctor({doctorDetails} : DoctorCarouselProps){
+export default function AskDoctor(){
 
     const [result, setResult] = useState<resultProps[]>([]);
 
@@ -87,14 +86,14 @@ export default function AskDoctor({doctorDetails} : DoctorCarouselProps){
         // };
     
         // api();
-        setResult(doctorDetails)
+        // setResult(doctorDetails)
     }, []);
     
    
     return (
         <>
 
-        <div className="container mx-auto">
+        <div className="container mx-auto w-4/5">
             <div className='flex justify-center flex-col'>
                 <span className='text-center text-2xl mt-10'>Your first Query is FREE !</span>
                 <div className='grid grid-cols-1 mt-8  lg:grid-cols-2'>
@@ -121,8 +120,7 @@ export default function AskDoctor({doctorDetails} : DoctorCarouselProps){
                            <span className='font-semibold text-xl'>2233</span> Doctors Online
                         </span>
                         <div className='mt-10 lg:m-14 mb-1'>  
-                            <DoctorCarousel docProp={doctorDetails} />      
-                            
+                            <DoctorCarousel  />
                         </div>
                         
                     </div>
