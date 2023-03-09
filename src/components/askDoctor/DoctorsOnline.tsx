@@ -2,7 +2,6 @@ import React, { ReactComponentElement } from 'react'
 import { Card,  Carousel,  Avatar, Rating} from 'flowbite-react'
 import * as CONSTANTS from '../../constants';
 
-export const prerender = true;
 
 type resultProps = {
   drName: string;
