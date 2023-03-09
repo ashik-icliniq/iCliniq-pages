@@ -26,7 +26,6 @@ function DoctorCarousel(carouselProp) {
               indicators={false} >
                   {
                       carouselProp['carouselProp'].map((res: resultProps) => {
-                          
                           return (
                               <Card className='px-10 '>
                               <div className='flex items-center'>
