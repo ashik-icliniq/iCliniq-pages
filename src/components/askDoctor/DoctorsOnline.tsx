@@ -25,7 +25,7 @@ function DoctorCarousel(carouselProp) {
               rightControl={<i aria-hidden className="fa fa-arrow-right"></i>}
               indicators={false} >
                   {
-                      CONSTANTS.ONLINE_DOCTORS['Doctors'].map((res: resultProps) => {
+                      carouselProp['carouselProp'].map((res: resultProps) => {
                           
                           return (
                               <Card className='px-10 '>
