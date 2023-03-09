@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactComponentElement } from 'react'
 import { Card,  Carousel,  Avatar, Rating} from 'flowbite-react'
 import * as CONSTANTS from '../../constants';
 
@@ -32,7 +32,7 @@ function DoctorCarousel() {
                                       </div>
                                       <Rating className='mt-2'>
                                       {(() => {
-                                          const arr: any = [];
+                                          const arr: React.ReactElement[] = [];
                                           for (let i:number = 1; i <= 5; i++) {
                                               if(i <= res.rating){
                                                   arr.push(<Rating.Star />)

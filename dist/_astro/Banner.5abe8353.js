@@ -1,9 +1,0 @@
-import{r as l}from"./index.f824fa59.js";import{j as e,B as i}from"./jsx-runtime.61c09057.js";const t=()=>{const s=i,[a,r]=l.useState(s[0]),d=n=>{r(n)};return e.jsx("div",{className:"banner-menu hidden lg:flex flex-wrap",children:s.map(n=>e.jsx("span",{className:`${a===n?"banner-menu-active":""}`,onClick:o=>{d(n)},children:n},n))})};function b(){return e.jsxs(e.Fragment,{children:[e.jsx(t,{}),e.jsx("div",{className:"banner",children:e.jsxs("div",{className:"banner-search block md:flex justify-around w-9/12 lg:w-7/12 items-center	",children:[e.jsxs("select",{className:` w-full  md:w-2/5	h-10 block px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-                focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-                invalid:border-pink-500 invalid:text-pink-600
-                focus:invalid:border-pink-500 focus:invalid:ring-pink-500`,children:[e.jsx("option",{selected:!0,value:"",children:"Select an option ---"}),e.jsx("option",{value:"saab",children:"Saab"}),e.jsx("option",{value:"opel",children:"Opel"}),e.jsx("option",{value:"audi",children:"Audi"})]}),e.jsx("input",{className:` mt-3 md:mt-0 w-full  md:w-1/3	 h-10  block px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-                focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-                disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-                invalid:border-pink-500 invalid:text-pink-600
-                focus:invalid:border-pink-500 focus:invalid:ring-pink-500`,type:"text",placeholder:"Search"}),e.jsx("button",{className:"h-10 mt-3 md:mt-0 ",children:"Search"})]})})]})}export{b as default};
