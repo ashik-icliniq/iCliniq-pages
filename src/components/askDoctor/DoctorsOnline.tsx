@@ -2,6 +2,7 @@ import React, { ReactComponentElement } from 'react'
 import { Card,  Carousel,  Avatar, Rating} from 'flowbite-react'
 import * as CONSTANTS from '../../constants';
 
+export const prerender = true;
 
 type resultProps = {
   drName: string;
@@ -11,60 +12,61 @@ type resultProps = {
 };
 
 type DoctorDetails = {
-    doctorsDetails : string []
+    doctorsDetails? : string []
 }
 
 function DoctorCarousel(carouselProp) {
 
-    console.log(carouselProp)
+    console.log(carouselProp['carouselProp'].first_name)
   
   return(
       <div className="h-32 ">
+        {carouselProp['carouselProp'].first_name}
           <Carousel
               leftControl={<i aria-hidden className="fa fa-arrow-left"></i>}
               rightControl={<i aria-hidden className="fa fa-arrow-right"></i>}
               indicators={false} >
                   {
-                      carouselProp['carouselProp'].map((res: resultProps) => {
-                          return (
-                              <Card className='px-10 '>
-                              <div className='flex items-center'>
-                                  <div className='flex items-center justify-center flex-col'>
-                                  <div className="flex flex-wrap gap-2">
-                                          <Avatar
-                                              img={res.img}
-                                              rounded={true}
-                                          />
-                                      </div>
-                                      <Rating className='mt-2'>
-                                      {(() => {
-                                          const arr: React.ReactElement[] = [];
-                                          for (let i:number = 1; i <= 5; i++) {
-                                              if(i <= res.rating){
-                                                  arr.push(<Rating.Star />)
-                                              }
-                                              else {
-                                                  arr.push(<Rating.Star filled={false} />)
-                                              }
-                                          }
-                                          return(
-                                              <>
-                                                  {arr}
-                                              </>
-                                          )   
-                                      })()}
-                                      </Rating>
-                                  </div>
-                                  <div className=' pl-5 flex flex-col'>
-                                      <span className='text-l	'>{res.drName}</span>
-                                      <span className='text-slate-400	text-sm	'>{res.expertIn}</span>
-                                  </div>
-                              </div>
-                          </Card>
+                    //   carouselProp['carouselProp'].map((res: resultProps) => {
+                    //       return (
+                    //           <Card className='px-10 '>
+                    //           <div className='flex items-center'>
+                    //               <div className='flex items-center justify-center flex-col'>
+                    //               <div className="flex flex-wrap gap-2">
+                    //                       <Avatar
+                    //                           img={res.img}
+                    //                           rounded={true}
+                    //                       />
+                    //                   </div>
+                    //                   <Rating className='mt-2'>
+                    //                   {(() => {
+                    //                       const arr: React.ReactElement[] = [];
+                    //                       for (let i:number = 1; i <= 5; i++) {
+                    //                           if(i <= res.rating){
+                    //                               arr.push(<Rating.Star />)
+                    //                           }
+                    //                           else {
+                    //                               arr.push(<Rating.Star filled={false} />)
+                    //                           }
+                    //                       }
+                    //                       return(
+                    //                           <>
+                    //                               {arr}
+                    //                           </>
+                    //                       )   
+                    //                   })()}
+                    //                   </Rating>
+                    //               </div>
+                    //               <div className=' pl-5 flex flex-col'>
+                    //                   <span className='text-l	'>{res.drName}</span>
+                    //                   <span className='text-slate-400	text-sm	'>{res.expertIn}</span>
+                    //               </div>
+                    //           </div>
+                    //       </Card>
                           
-                          )
+                    //       )
                           
-                      })
+                    //   })
                   }
               
           </Carousel>
