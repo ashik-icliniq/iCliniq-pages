@@ -2,6 +2,7 @@ import React, { ReactComponentElement } from 'react'
 import { Card,  Carousel,  Avatar, Rating} from 'flowbite-react'
 import * as CONSTANTS from '../../constants';
 
+export const prerender = true;
 
 type resultProps = {
   drName: string;
@@ -16,7 +17,7 @@ type DoctorDetails = {
 
 function DoctorCarousel(carouselProp) {
 
-    
+    console.log(carouselProp['carouselProp'].price)
   
   return(
       <div className="h-32 ">
