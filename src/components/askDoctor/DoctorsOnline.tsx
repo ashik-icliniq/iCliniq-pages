@@ -10,7 +10,13 @@ type resultProps = {
   expertIn: string;
 };
 
-function DoctorCarousel() {
+type DoctorDetails = {
+    doctorsDetails : string []
+}
+
+function DoctorCarousel(carouselProp) {
+
+  
   return(
       <div className="h-32 ">
           <Carousel
@@ -66,7 +72,8 @@ function DoctorCarousel() {
   )
 }
 
-function DoctorsOnline() {
+function DoctorsOnline({doctorsDetails} : DoctorDetails) {
+
   return (
     <div className='flex justify-center flex-col mt-10 lg:mt-0'>
       <img className='w-100 object-contain h-64 w-100' src="https://assets.icliniq.com/v2/assets/images/message.svg" />
@@ -74,7 +81,7 @@ function DoctorsOnline() {
         <span className='font-semibold text-xl'>2233</span> Doctors Online
       </span>
       <div className='mt-10 lg:m-14 mb-1'>
-        <DoctorCarousel />
+        <DoctorCarousel carouselProp={doctorsDetails} />
       </div>
 
     </div>
