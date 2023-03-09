@@ -16,7 +16,7 @@ type DoctorDetails = {
 
 function DoctorCarousel(carouselProp) {
 
-    console.log(carouselProp['carouselProp'].first_name)
+    
   
   return(
       <div className="h-32 ">
