@@ -10,61 +10,61 @@ type resultProps = {
   expertIn: string;
 };
 
-type DoctorDetails = {
-    doctorsDetails? : string []
-}
+// type DoctorDetails = {
+//     doctorsDetails? : string []
+// }
 
 function DoctorCarousel(carouselProp) {
 
   
   return(
       <div className="h-32 ">
-    
+        {}
           <Carousel
               leftControl={<i aria-hidden className="fa fa-arrow-left"></i>}
               rightControl={<i aria-hidden className="fa fa-arrow-right"></i>}
               indicators={false} >
                   {
-                    //   carouselProp['carouselProp'].map((res: resultProps) => {
-                    //       return (
-                    //           <Card className='px-10 '>
-                    //           <div className='flex items-center'>
-                    //               <div className='flex items-center justify-center flex-col'>
-                    //               <div className="flex flex-wrap gap-2">
-                    //                       <Avatar
-                    //                           img={res.img}
-                    //                           rounded={true}
-                    //                       />
-                    //                   </div>
-                    //                   <Rating className='mt-2'>
-                    //                   {(() => {
-                    //                       const arr: React.ReactElement[] = [];
-                    //                       for (let i:number = 1; i <= 5; i++) {
-                    //                           if(i <= res.rating){
-                    //                               arr.push(<Rating.Star />)
-                    //                           }
-                    //                           else {
-                    //                               arr.push(<Rating.Star filled={false} />)
-                    //                           }
-                    //                       }
-                    //                       return(
-                    //                           <>
-                    //                               {arr}
-                    //                           </>
-                    //                       )   
-                    //                   })()}
-                    //                   </Rating>
-                    //               </div>
-                    //               <div className=' pl-5 flex flex-col'>
-                    //                   <span className='text-l	'>{res.drName}</span>
-                    //                   <span className='text-slate-400	text-sm	'>{res.expertIn}</span>
-                    //               </div>
-                    //           </div>
-                    //       </Card>
+                      CONSTANTS.ONLINE_DOCTORS[Object.keys(CONSTANTS.ONLINE_DOCTORS)].map((res: resultProps) => {
+                          return (
+                              <Card className='px-10 '>
+                              <div className='flex items-center'>
+                                  <div className='flex items-center justify-center flex-col'>
+                                  <div className="flex flex-wrap gap-2">
+                                          <Avatar
+                                              img={res.img}
+                                              rounded={true}
+                                          />
+                                      </div>
+                                      <Rating className='mt-2'>
+                                      {(() => {
+                                          const arr: React.ReactElement[] = [];
+                                          for (let i:number = 1; i <= 5; i++) {
+                                              if(i <= res.rating){
+                                                  arr.push(<Rating.Star />)
+                                              }
+                                              else {
+                                                  arr.push(<Rating.Star filled={false} />)
+                                              }
+                                          }
+                                          return(
+                                              <>
+                                                  {arr}
+                                              </>
+                                          )   
+                                      })()}
+                                      </Rating>
+                                  </div>
+                                  <div className=' pl-5 flex flex-col'>
+                                      <span className='text-l	'>{res.drName}</span>
+                                      <span className='text-slate-400	text-sm	'>{res.expertIn}</span>
+                                  </div>
+                              </div>
+                          </Card>
                           
-                    //       )
+                          )
                           
-                    //   })
+                      })
                   }
               
           </Carousel>
@@ -72,7 +72,9 @@ function DoctorCarousel(carouselProp) {
   )
 }
 
-function DoctorsOnline({doctorsDetails} : DoctorDetails) {
+function DoctorsOnline(
+  // {doctorsDetails} : DoctorDetails
+  ) {
 
   return (
     <div className='flex justify-center flex-col mt-10 lg:mt-0'>
@@ -81,7 +83,9 @@ function DoctorsOnline({doctorsDetails} : DoctorDetails) {
         <span className='font-semibold text-xl'>2233</span> Doctors Online
       </span>
       <div className='mt-10 lg:m-14 mb-1'>
-        <DoctorCarousel carouselProp={doctorsDetails} />
+        <DoctorCarousel 
+        // carouselProp={doctorsDetails}
+         />
       </div>
 
     </div>

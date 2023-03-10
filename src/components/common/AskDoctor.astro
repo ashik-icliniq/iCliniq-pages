@@ -3,22 +3,20 @@ import DoctorsOnline from '../askDoctor/DoctorsOnline'
 import LiveSpecialist from '../askDoctor/LiveSpecialist';
 import ParadeInside from '../askDoctor/ParadeInside';
 
-
 export const prerender = true;
 const response = await fetch('https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT');
 const result = await response.json();
 
 ---
 
-
-
 <div class="container mx-auto w-4/5">
     <div class='flex justify-center flex-col'>
         <span class='text-center text-2xl mt-10'>Your first Query is FREE !</span>
         <div class='grid grid-cols-1 mt-8  lg:grid-cols-2'>
            <LiveSpecialist />
-           {result.price}
-           <DoctorsOnline doctorsDetails={result} client:idle />
+           <DoctorsOnline 
+            <!-- doctorsDetails={result} -->
+            client:idle />
         </div>
     </div>
     <div class='flex justify-center flex-col'>
