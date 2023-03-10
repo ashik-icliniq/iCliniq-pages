@@ -76,7 +76,7 @@ function DoctorsOnline({doctorsDetails} : DoctorDetails) {
 
   return (
     <div className='flex justify-center flex-col mt-10 lg:mt-0'>
-      <img className='w-100 object-contain h-64 w-100' src="https://assets.icliniq.com/v2/assets/images/message.svg" />
+      <img className='w-100 object-contain h-64 w-100' alt='msg-image' src="https://assets.icliniq.com/v2/assets/images/message.svg" />
       <span className='text-xl text-center'>
         <span className='font-semibold text-xl'>2233</span> Doctors Online
       </span>

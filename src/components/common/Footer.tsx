@@ -9,7 +9,7 @@ function Footer() {
             <div className=" mx-auto px-0 lg:px-5 w-4/5  container">
                 <div className='flex justify-between items-center  mb-10 ' >
                     <div>
-                        <img src="/assets/images/ic-white-logo.svg" className='w-32 bg-white p-3 py-2 rounded' />
+                        <img src="/assets/images/ic-white-logo.svg" alt='logo' className='w-32 bg-white p-3 py-2 rounded' />
                     </div>
                     <div className='flex items-center'>
                         <div className='bg-violet-400		h-8 w-8 text-center mr-3 pt-1 cursor-pointer rounded-full'>
