@@ -10,13 +10,13 @@ type resultProps = {
   expertIn: string;
 };
 
-// type DoctorDetails = {
-//     doctorsDetails? : string []
-// }
+type DoctorDetails = {
+    doctorsDetails? : string []
+}
 
 function DoctorCarousel(carouselProp) {
 
-  
+
   return(
       <div className="h-32 ">
         {}
@@ -25,7 +25,7 @@ function DoctorCarousel(carouselProp) {
               rightControl={<i aria-hidden className="fa fa-arrow-right"></i>}
               indicators={false} >
                   {
-                      CONSTANTS.ONLINE_DOCTORS[Object.keys(CONSTANTS.ONLINE_DOCTORS)].map((res: resultProps) => {
+                      carouselProp['carouselProp'].map((res: resultProps) => {
                           return (
                               <Card className='px-10 '>
                               <div className='flex items-center'>
@@ -72,9 +72,7 @@ function DoctorCarousel(carouselProp) {
   )
 }
 
-function DoctorsOnline(
-  // {doctorsDetails} : DoctorDetails
-  ) {
+function DoctorsOnline({doctorsDetails} : DoctorDetails) {
 
   return (
     <div className='flex justify-center flex-col mt-10 lg:mt-0'>
@@ -83,9 +81,7 @@ function DoctorsOnline(
         <span className='font-semibold text-xl'>2233</span> Doctors Online
       </span>
       <div className='mt-10 lg:m-14 mb-1'>
-        <DoctorCarousel 
-        // carouselProp={doctorsDetails}
-         />
+        <DoctorCarousel carouselProp={doctorsDetails} />
       </div>
 
     </div>
